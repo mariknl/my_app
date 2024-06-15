@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-
-  
   get 'home/index'
+  get '/read/:article_id', to: 'home#read', as: "read"
   resources :articles
   resources :users
+
   root to: 'home#index'
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
